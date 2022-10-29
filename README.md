@@ -1,16 +1,13 @@
-TinyLinux
-=========
+# iVM
 
 Really a tiny minimum implementation of [Virtualization framework](https://developer.apple.com/documentation/virtualization) to boot Linux.
 
-Prerequisites
--------------
+## Prerequisites
 
 - macOS Big Sur or later
 - Xcode 12.3 or later
 
-Usage
------
+## Usage
 
 Prepare Linux kernel and ramdisk file that works on each Intel or Apple Silicon architecture.
 
@@ -44,13 +41,13 @@ hdiutil detach disk4 # Same here.
 rm -rf ubuntu
 ```
 
-Build TinyLinux then boot.
+Build iVM then boot.
 
 ```sh
-# Build TinyLinux
+# Build iVM
 make
 # Boot Linux
-.build/TinyLinux.xcarchive/Products/usr/local/bin/TinyLinux \
+.build/iVM.xcarchive/Products/usr/local/bin/iVM \
   --vmlinux vmlinux \
   --initrd initrd \
   --commandline "console=hvc0 root=/dev/vda1" \
@@ -62,9 +59,9 @@ It is not necessary to run `gzip -d` to ungzip `vmlinuz` but you can use that bz
 
 ### Serial device
 
-TinyLinux connects standard input and output to the serial device.
+iVM connects standard input and output to the serial device.
 To make it works on the terminal emulator, you may need to disable the line discipline used for the current terminal emulator
-by using `stty raw` prior to use TinyLinux and restore state after using it.
+by using `stty raw` prior to use iVM and restore state after using it.
 
 For example, make a following shell script and use it instead.
 
@@ -75,7 +72,7 @@ save_state=$(stty -g)
 # Make it raw
 stty raw
 # Boot Linux
-.build/TinyLinux.xcarchive/Products/usr/local/bin/TinyLinux ...
+.build/iVM.xcarchive/Products/usr/local/bin/iVM ...
 # Restore original state
 stty "$save_state"
 ```

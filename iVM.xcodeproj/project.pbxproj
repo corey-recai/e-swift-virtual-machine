@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36C00952290CCB9F00B828D2 /* VirtualMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C00951290CCB9F00B828D2 /* VirtualMachine.swift */; };
+		36C00955290CCC8200B828D2 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 36C00954290CCC8200B828D2 /* ArgumentParser */; };
 		54DE076425B2CD98008AA3BF /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE076225B2CD98008AA3BF /* Command.swift */; };
-		54DE076925B2CDCA008AA3BF /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 54DE076825B2CDCA008AA3BF /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +25,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		36C00951290CCB9F00B828D2 /* VirtualMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualMachine.swift; sourceTree = "<group>"; };
 		54347EE1285558F400169485 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		54DE075725B2CD56008AA3BF /* TinyLinux */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TinyLinux; sourceTree = BUILT_PRODUCTS_DIR; };
+		54DE075725B2CD56008AA3BF /* iVM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iVM; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DE076225B2CD98008AA3BF /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		54DE076325B2CD98008AA3BF /* TinyLinux.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = TinyLinux.entitlements; sourceTree = "<group>"; };
+		54DE076325B2CD98008AA3BF /* iVM.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = iVM.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,45 +37,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54DE076925B2CDCA008AA3BF /* ArgumentParser in Frameworks */,
+				36C00955290CCC8200B828D2 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36C00953290CCC8200B828D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		54DE074E25B2CD56008AA3BF = {
 			isa = PBXGroup;
 			children = (
 				54347EE1285558F400169485 /* README.md */,
-				54DE075925B2CD56008AA3BF /* TinyLinux */,
+				54DE075925B2CD56008AA3BF /* iVM */,
 				54DE075825B2CD56008AA3BF /* Products */,
+				36C00953290CCC8200B828D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		54DE075825B2CD56008AA3BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54DE075725B2CD56008AA3BF /* TinyLinux */,
+				54DE075725B2CD56008AA3BF /* iVM */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		54DE075925B2CD56008AA3BF /* TinyLinux */ = {
+		54DE075925B2CD56008AA3BF /* iVM */ = {
 			isa = PBXGroup;
 			children = (
+				36C00951290CCB9F00B828D2 /* VirtualMachine.swift */,
 				54DE076225B2CD98008AA3BF /* Command.swift */,
-				54DE076325B2CD98008AA3BF /* TinyLinux.entitlements */,
+				54DE076325B2CD98008AA3BF /* iVM.entitlements */,
 			);
-			path = TinyLinux;
+			path = iVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54DE075625B2CD56008AA3BF /* TinyLinux */ = {
+		54DE075625B2CD56008AA3BF /* iVM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54DE075E25B2CD56008AA3BF /* Build configuration list for PBXNativeTarget "TinyLinux" */;
+			buildConfigurationList = 54DE075E25B2CD56008AA3BF /* Build configuration list for PBXNativeTarget "iVM" */;
 			buildPhases = (
 				54DE075325B2CD56008AA3BF /* Sources */,
 				54DE075425B2CD56008AA3BF /* Frameworks */,
@@ -83,12 +94,12 @@
 			);
 			dependencies = (
 			);
-			name = TinyLinux;
+			name = iVM;
 			packageProductDependencies = (
-				54DE076825B2CDCA008AA3BF /* ArgumentParser */,
+				36C00954290CCC8200B828D2 /* ArgumentParser */,
 			);
-			productName = TinyLinux;
-			productReference = 54DE075725B2CD56008AA3BF /* TinyLinux */;
+			productName = iVM;
+			productReference = 54DE075725B2CD56008AA3BF /* iVM */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +109,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					54DE075625B2CD56008AA3BF = {
 						CreatedOnToolsVersion = 12.3;
@@ -106,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 54DE075225B2CD56008AA3BF /* Build configuration list for PBXProject "TinyLinux" */;
+			buildConfigurationList = 54DE075225B2CD56008AA3BF /* Build configuration list for PBXProject "iVM" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,7 +133,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54DE075625B2CD56008AA3BF /* TinyLinux */,
+				54DE075625B2CD56008AA3BF /* iVM */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C00952290CCB9F00B828D2 /* VirtualMachine.swift in Sources */,
 				54DE076425B2CD98008AA3BF /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +185,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -234,6 +247,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -258,7 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TinyLinux/TinyLinux.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iVM/iVM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -275,7 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TinyLinux/TinyLinux.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iVM/iVM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,7 +304,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		54DE075225B2CD56008AA3BF /* Build configuration list for PBXProject "TinyLinux" */ = {
+		54DE075225B2CD56008AA3BF /* Build configuration list for PBXProject "iVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54DE075C25B2CD56008AA3BF /* Debug */,
@@ -299,7 +313,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54DE075E25B2CD56008AA3BF /* Build configuration list for PBXNativeTarget "TinyLinux" */ = {
+		54DE075E25B2CD56008AA3BF /* Build configuration list for PBXNativeTarget "iVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54DE075F25B2CD56008AA3BF /* Debug */,
@@ -322,7 +336,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		54DE076825B2CDCA008AA3BF /* ArgumentParser */ = {
+		36C00954290CCC8200B828D2 /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 54DE076725B2CDCA008AA3BF /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;

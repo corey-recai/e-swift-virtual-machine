@@ -1,4 +1,4 @@
-NAME = TinyLinux
+NAME = iVM
 
 BUILD_PATH = .build
 
@@ -9,9 +9,9 @@ XCODE_ARCHIVE_PATH = $(BUILD_PATH)/$(NAME).xcarchive
 .PHONY: all
 all: build
 
-.PHONY: claen
+.PHONY: clean
 clean:
-	git clean -dfX
+	git clean -dfX -e !image-files
 
 .PHONY: build
 build:
