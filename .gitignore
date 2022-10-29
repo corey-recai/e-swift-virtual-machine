@@ -2,4 +2,4 @@
 .build/
 project.xcworkspace/
 xcuserdata/
-image-files/
+.images/
